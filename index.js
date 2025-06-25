@@ -25,6 +25,7 @@ const commandMapping = {
   "kelas.js": "daftar-kelas",
   "materi.js": "materi",
   "nilai.js": "nilai",
+  "logout.js": "logout",
 };
 
 for (const file of commandFiles) {

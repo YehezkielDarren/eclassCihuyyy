@@ -56,6 +56,10 @@ const commands = [
       },
     ],
   },
+  {
+    name: "logout",
+    description: "Menghapus sesi (cookie) Anda dari bot.",
+  },
 ];
 
 const rest = new REST({ version: "10" }).setToken(BOT_TOKEN);
