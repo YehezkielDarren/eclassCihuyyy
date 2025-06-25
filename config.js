@@ -6,7 +6,7 @@ module.exports = {
     process.env.LOGIN_URL ||
     "https://eclass.ukdw.ac.id/e-class/id/login/index.php",
   DASHBOARD_URL: "https://eclass.ukdw.ac.id/e-class/id/my/",
-  COOKIES_DIR: "../cookies",
+  COOKIES_DIR: "./cookies",
 
   PUPPETEER_OPTIONS: {
     headless: true,
