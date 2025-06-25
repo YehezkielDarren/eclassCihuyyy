@@ -36,7 +36,7 @@ async function performLogin(page, username, password, userCookiePath) {
 async function handleLoginCommand(interaction) {
   await interaction.deferReply({ ephemeral: true });
   const userId = interaction.user.id;
-  const userCookiePath = `${config.COOKIES_DIR}/${userId}.json`;
+  const userCookiePath = `${config.COOKIES_FOLDER_NAME}/${userId}.json`;
 
   const username = interaction.options.getString("username");
   const password = interaction.options.getString("password");

@@ -2,11 +2,9 @@ require("dotenv").config();
 
 module.exports = {
   DISCORD_TOKEN: process.env.DISCORD_TOKEN,
-  LOGIN_URL:
-    process.env.LOGIN_URL ||
-    "https://eclass.ukdw.ac.id/e-class/id/login/index.php",
-  DASHBOARD_URL: "https://eclass.ukdw.ac.id/e-class/id/my/",
-  COOKIES_DIR: "./cookies",
+  LOGIN_URL: process.env.APP_URL || "https://eclass.ukdw.ac.id/e-class/id/",
+  DASHBOARD_URL: "https://eclass.ukdw.ac.id/e-class/id/kelas/index",
+  COOKIES_FOLDER_NAME: "./cookies",
 
   PUPPETEER_OPTIONS: {
     headless: true,

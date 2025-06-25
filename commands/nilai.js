@@ -7,7 +7,7 @@ async function handleNilaiCommand(interaction) {
   await interaction.deferReply();
 
   const userId = interaction.user.id;
-  const userCookiePath = `${config.COOKIES_DIR}/${userId}.json`;
+  const userCookiePath = `${config.COOKIES_FOLDER_NAME}/${userId}.json`;
   const courseCode = interaction.options.getString("kode_matkul");
   const nilaiUrl = `https://eclass.ukdw.ac.id/e-class/id/kelas/nilai/${courseCode.toUpperCase()}`;
 

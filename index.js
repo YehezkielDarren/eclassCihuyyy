@@ -3,13 +3,15 @@ const fs = require("fs");
 const path = require("path");
 const config = require("./config.js");
 
-if (!fs.existsSync(config.COOKIES_DIR)) {
-  fs.mkdirSync(config.COOKIES_DIR);
-  console.log(`Direktori cookies dibuat di: ${config.COOKIES_DIR}`);
+// Membuat direktori cookies jika belum ada
+if (!fs.existsSync(config.COOKIES_FOLDER_NAME)) {
+  fs.mkdirSync(config.COOKIES_FOLDER_NAME);
+  console.log(`Direktori cookies dibuat di: ${config.COOKIES_FOLDER_NAME}`);
 }
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
+// Membuat koleksi untuk menyimpan semua perintah
 client.commands = new Collection();
 
 const commandsPath = path.join(__dirname, "commands");
@@ -17,9 +19,10 @@ const commandFiles = fs
   .readdirSync(commandsPath)
   .filter((file) => file.endsWith(".js"));
 
+// Petakan nama file ke nama perintah slash command
 const commandMapping = {
   "login.js": "login-eclass",
-  "daftarKelas.js": "daftar-kelas",
+  "kelas.js": "daftar-kelas",
   "materi.js": "materi",
   "nilai.js": "nilai",
 };

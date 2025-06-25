@@ -6,7 +6,7 @@ const config = require("../config.js");
 async function handleMateriCommand(interaction) {
   await interaction.deferReply();
   const userId = interaction.user.id;
-  const userCookiePath = `${config.COOKIES_DIR}/${userId}.json`;
+  const userCookiePath = `${config.COOKIES_FOLDER_NAME}/${userId}.json`;
   const kodeMatkul = interaction.options.getString("kode_matkul");
   const MATERI_URL = `https://eclass.ukdw.ac.id/e-class/id/materi/index/${kodeMatkul.toUpperCase()}`;
 

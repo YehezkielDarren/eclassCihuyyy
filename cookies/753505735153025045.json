@@ -1,0 +1,16 @@
+[
+  {
+    "name": "ukdw_session",
+    "value": "lf5pliukkk870vfa8u96p1cc3v66fref",
+    "domain": "eclass.ukdw.ac.id",
+    "path": "/",
+    "expires": 1750853157.396182,
+    "size": 44,
+    "httpOnly": true,
+    "secure": false,
+    "session": false,
+    "priority": "Medium",
+    "sameParty": false,
+    "sourceScheme": "Secure"
+  }
+]
