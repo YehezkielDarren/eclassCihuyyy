@@ -1,10 +1,26 @@
 [
   {
+    "name": "cf_clearance",
+    "value": "NxCixbxdzjGfLEGIHl_Z_vzMdCrZdX6BMBvpM2h8F4Q-1752057668-1.2.1.1-dM3bdaAGktYU8DUaWt5F1Eh_1VNPqkiCicqOx.KoKnIDsxFu.sZkceEKqysv9Z.uhqV2zyzCohri45AU_bRbYYuAthVioKOLd49P3t9jeMeR77fQk9c70KA0sRv4uDBI0H_2F_qVL2WwYtgf39yvd687hkqzCYaAhxBuZXAgxfQTPqM9OiW9TmSXZ9II5M2YxSu9Is.2Zy86Kw0j_A8ELHUaxXcvYfk0QdQ2pVdTr6A",
+    "domain": ".ukdw.ac.id",
+    "path": "/",
+    "expires": 1783593668.200655,
+    "size": 310,
+    "httpOnly": true,
+    "secure": true,
+    "session": false,
+    "sameSite": "None",
+    "priority": "Medium",
+    "sameParty": false,
+    "sourceScheme": "Secure",
+    "partitionKey": "https://ukdw.ac.id"
+  },
+  {
     "name": "ukdw_session",
-    "value": "lf5pliukkk870vfa8u96p1cc3v66fref",
+    "value": "ks6ntcdqa4q87h2uuqemo1plm1q6dgs7",
     "domain": "eclass.ukdw.ac.id",
     "path": "/",
-    "expires": 1750853157.396182,
+    "expires": 1752064868.213854,
     "size": 44,
     "httpOnly": true,
     "secure": false,

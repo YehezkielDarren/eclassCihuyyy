@@ -1,9 +1,10 @@
 const { EmbedBuilder } = require("discord.js");
-const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer-extra");
+const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 const fs = require("fs");
-const path = require("path");
 const config = require("../config.js");
 
+puppeteer.use(StealthPlugin());
 async function handleDaftarKelasCommand(interaction) {
   await interaction.deferReply();
   let browser = null;

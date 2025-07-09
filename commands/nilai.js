@@ -1,7 +1,10 @@
 const { EmbedBuilder } = require("discord.js");
-const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer-extra");
+const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 const fs = require("fs");
 const config = require("../config.js");
+
+puppeteer.use(StealthPlugin());
 
 async function handleNilaiCommand(interaction) {
   await interaction.deferReply();

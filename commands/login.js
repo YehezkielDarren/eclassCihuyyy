@@ -1,6 +1,9 @@
-const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer-extra");
+const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 const fs = require("fs");
 const config = require("../config.js");
+
+puppeteer.use(StealthPlugin());
 
 async function performLogin(page, username, password, userCookiePath) {
   console.log(
@@ -21,7 +24,10 @@ async function performLogin(page, username, password, userCookiePath) {
     page.waitForNavigation({ waitUntil: "networkidle2" }),
   ]);
 
-  if (!page.url().includes("/kelas/")) {
+  const finalUrl = page.url();
+  console.log(`[DIAGNOSIS] URL setelah login adalah: ${finalUrl}`);
+
+  if (!finalUrl.includes("/kelas/")) {
     throw new Error(
       'Login gagal. URL tidak mengandung "/kelas/" setelah mencoba login.'
     );
@@ -40,6 +46,7 @@ async function handleLoginCommand(interaction) {
 
   const username = interaction.options.getString("username");
   const password = interaction.options.getString("password");
+
   let browser = null;
   try {
     browser = await puppeteer.launch(config.PUPPETEER_OPTIONS);

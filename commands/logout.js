@@ -1,5 +1,4 @@
 const fs = require("fs");
-const path = require("path");
 const config = require("../config.js");
 
 async function handdleLogoutCommand(interaction) {
