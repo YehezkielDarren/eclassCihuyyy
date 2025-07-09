@@ -7,7 +7,7 @@ module.exports = {
   COOKIES_FOLDER_NAME: "./cookies",
 
   PUPPETEER_OPTIONS: {
-    headless: true,
+    headless: false,
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
